@@ -8,6 +8,8 @@ RUN go mod init get-data-script
 
 RUN go get github.com/gocolly/colly/v2
 
+RUN go get github.com/aws/aws-sdk-go-v2
+
 RUN go mod tidy
 
 CMD ["go", "run", "get_data.go"]
