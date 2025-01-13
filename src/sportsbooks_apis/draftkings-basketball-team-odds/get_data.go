@@ -111,12 +111,12 @@ func main() {
 		}
 		if game.Home != nil && game.Away != nil { // Append only when both teams are set
 			games = append(games, *game)
-			game = &Game{} // Reset game for the next match
+			game = &Game{} // Reset game for the next game instance
 		}
 
 	})
 
-	var sportsbookURL string = "https://sportsbook.draftkings.com/leagues/football/nba"
+	var sportsbookURL string = "https://sportsbook.draftkings.com/leagues/basketball/nba"
 
 	c.Visit(sportsbookURL)
 
