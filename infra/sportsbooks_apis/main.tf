@@ -5,5 +5,5 @@ module draftkings_basketball_team_api {
     dynambodb_table_name = "draftkings-basketball-team-odds"
     sportsbook = "DraftKings"
     sport = "Basketball"
-    team_odds_bool = true
+    team_odds_bool = false
 }
