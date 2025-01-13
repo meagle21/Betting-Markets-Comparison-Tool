@@ -116,7 +116,7 @@ func main() {
 
 	})
 
-	var sportsbookURL string = "https://sportsbook.draftkings.com/leagues/basketball/nba"
+	var sportsbookURL string = "https://sportsbook.draftkings.com/leagues/football/nba"
 
 	c.Visit(sportsbookURL)
 
