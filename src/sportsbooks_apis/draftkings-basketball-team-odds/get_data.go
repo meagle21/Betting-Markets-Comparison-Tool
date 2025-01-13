@@ -111,7 +111,7 @@ func main() {
 		}
 		if game.Home != nil && game.Away != nil { // Append only when both teams are set
 			games = append(games, *game)
-			game = &Game{} // Reset game for the next match
+			game = &Game{} // Reset game for the next game instance
 		}
 
 	})
