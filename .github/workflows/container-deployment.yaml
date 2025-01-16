@@ -1,0 +1,73 @@
+name: "Deploy new docker containers"
+on:
+  pull_request:
+    branches:
+      - main
+    paths: ["src/sportsbooks_apis/**"]
+permissions:
+  contents: write
+  id-token: write
+# env: 
+#   AWS_ROLE_ARN: 
+#   AWS_REGION: 
+# jobs:
+#   apply-to-tfc:
+#     runs-on: ubuntu-latest
+#     steps:
+#         # Checkout Code
+#       - name: Checkout code 
+#         uses: actions/checkout@v3
+
+#         # Set up Terraformm in the GitHub runner
+#       - name: Setup Terraform
+#         uses: hashicorp/setup-terraform@v3
+#         with:
+#           terraform_version: 1.10.4
+
+#         # 
+#       - name: Configure Terraform Cloud authentication
+#         run: echo "credentials \"app.terraform.io\" { token = \"${{ secrets.TFC_TOKEN }}\" }" > ~/.terraformrc
+
+#         # Initialize Terraform in the runner
+#       - name: Terraform Init
+#         id: init
+#         run: terraform init
+
+#         # Validate Terraform configuration
+#       - name: Terraform Validate
+#         id: validate
+#         run: terraform validate
+
+#         # Plan Terraform changes
+#       - name: Terraform Plan
+#         id: plan
+#         run: terraform plan -out=tfplan
+
+#         # Run Terraform apply and auto approve 
+#       - name: Terraform Apply
+#         id: apply
+#         run: terraform apply -auto-approve tfplan
+
+#         # Pull output and store as an environmental variable, this is necessary to tell GitHub Actions were to send the container in ECR
+#       - name: Terraform Output
+#         id: output
+#         run: echo "${}=$(terraform output -raw ECR_REPO)" >> $GITHUB_ENV
+
+#   build-and-push:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout Repository
+#         uses: actions/checkout@v4
+#         with:
+#           repository: 
+#           ref: 
+#       - name: AWS Credentials configuration
+#         uses: aws-actions/configure-aws-credentials@v4
+#         with:
+#       - name: Login to ECR
+#         uses: aws-actions/amazon-ecr-login@v2
+#       - name: Build Docker image
+#         run: |
+#           docker build -t 
+#           docker push
+      
